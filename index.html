@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제 출제 사이트</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 문제 출제 사이트</h1>
+            <p>다양한 문제를 풀어보세요!</p>
+        </header>
+
+        <main class="quiz-container">
+            <div class="question-section">
+                <div class="question-header">
+                    <span class="question-number">문제 <span id="currentQuestion">1</span> / <span id="totalQuestions">0</span></span>
+                    <span class="timer" id="timer">00:00</span>
+                </div>
+                
+                <div class="question-content">
+                    <h2 id="questionText">문제를 불러오는 중...</h2>
+                </div>
+
+                <div class="options" id="optionsContainer">
+                    <!-- 선택지들이 동적으로 추가됩니다 -->
+                </div>
+
+                <div class="controls">
+                    <button id="prevBtn" class="btn btn-secondary" disabled>이전</button>
+                    <button id="nextBtn" class="btn btn-primary">다음</button>
+                    <button id="submitBtn" class="btn btn-success" style="display: none;">제출</button>
+                </div>
+            </div>
+
+            <div class="result-section" id="resultSection" style="display: none;">
+                <h2>🎉 결과</h2>
+                <div class="score-display">
+                    <span class="score" id="finalScore">0</span>
+                    <span class="total">/ <span id="totalScore">0</span></span>
+                </div>
+                <p id="scoreMessage"></p>
+                <button id="restartBtn" class="btn btn-primary">다시 시작</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 문제 출제 사이트. Made with ❤️</p>
+        </footer>
+    </div>
+
+    <script src="question.js"></script>
+</body>
+</html>
